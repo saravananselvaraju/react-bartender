@@ -1,0 +1,1 @@
+export const list_ico = '/img/ico';
