@@ -52,8 +52,8 @@ function Details(props) {
             <img className="Details-Img" src={Thumbnail}></img>
             <div className="Details-Body">
                 <div className="Details-Tag">
-                    <img src="/img/ico/glass.svg" className="Tag-Ico"></img><p className="Glass">{Glass}</p> 
-                    <img src="/img/ico/clock.svg" className="Tag-Ico"></img><p className="Date">{Date}</p>
+                    <img src={process.env.PUBLIC_URL +"/img/ico/glass.svg"} className="Tag-Ico"></img><p className="Glass">{Glass}</p> 
+                    <img src={process.env.PUBLIC_URL +"/img/ico/clock.svg"} className="Tag-Ico"></img><p className="Date">{Date}</p>
                     </div>
                 <table className="Details-Table">
                     <tr>

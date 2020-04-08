@@ -4,8 +4,8 @@ function Nav() {
     return (
         <nav>
             <div>
-                <img className="App-Logo-Img" src="/img/ico/bartender.svg"/>
-                <a className="App-Logo" href="/">Bartender</a>
+                <img className="App-Logo-Img" src={process.env.PUBLIC_URL + '/img/ico/bartender.svg'}/>
+                <a className="App-Logo" href={process.env.PUBLIC_URL +"/"}>Bartender</a>
             </div>
         </nav>
     )
