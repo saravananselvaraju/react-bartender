@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/react-bartender/precache-manifest.3640042101ac74f1d88a7475a9c2699e.js"
+  "/react-bartender/precache-manifest.f655d923a0fac3d02c968b2d4dd35b5d.js"
 );
 
 self.addEventListener('message', (event) => {
