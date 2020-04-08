@@ -1,22 +1,22 @@
 {
   "files": {
     "main.css": "/react-bartender/static/css/main.17654223.chunk.css",
-    "main.js": "/react-bartender/static/js/main.60eda2d4.chunk.js",
-    "main.js.map": "/react-bartender/static/js/main.60eda2d4.chunk.js.map",
+    "main.js": "/react-bartender/static/js/main.a5c820be.chunk.js",
+    "main.js.map": "/react-bartender/static/js/main.a5c820be.chunk.js.map",
     "runtime-main.js": "/react-bartender/static/js/runtime-main.0e028322.js",
     "runtime-main.js.map": "/react-bartender/static/js/runtime-main.0e028322.js.map",
-    "static/js/2.cb81a047.chunk.js": "/react-bartender/static/js/2.cb81a047.chunk.js",
-    "static/js/2.cb81a047.chunk.js.map": "/react-bartender/static/js/2.cb81a047.chunk.js.map",
+    "static/js/2.665cb22d.chunk.js": "/react-bartender/static/js/2.665cb22d.chunk.js",
+    "static/js/2.665cb22d.chunk.js.map": "/react-bartender/static/js/2.665cb22d.chunk.js.map",
     "index.html": "/react-bartender/index.html",
-    "precache-manifest.6e2c3edb96accf447efeea1f51c4eb2d.js": "/react-bartender/precache-manifest.6e2c3edb96accf447efeea1f51c4eb2d.js",
+    "precache-manifest.2675ff4d8ad1e19ff9a116aa50e025d2.js": "/react-bartender/precache-manifest.2675ff4d8ad1e19ff9a116aa50e025d2.js",
     "service-worker.js": "/react-bartender/service-worker.js",
     "static/css/main.17654223.chunk.css.map": "/react-bartender/static/css/main.17654223.chunk.css.map",
-    "static/js/2.cb81a047.chunk.js.LICENSE": "/react-bartender/static/js/2.cb81a047.chunk.js.LICENSE"
+    "static/js/2.665cb22d.chunk.js.LICENSE": "/react-bartender/static/js/2.665cb22d.chunk.js.LICENSE"
   },
   "entrypoints": [
     "static/js/runtime-main.0e028322.js",
-    "static/js/2.cb81a047.chunk.js",
+    "static/js/2.665cb22d.chunk.js",
     "static/css/main.17654223.chunk.css",
-    "static/js/main.60eda2d4.chunk.js"
+    "static/js/main.a5c820be.chunk.js"
   ]
 }
