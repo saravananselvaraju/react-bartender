@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "7778f172224c72374a1201be8169a2c9",
+    "revision": "a7e6c6f653c0af883a22dc3f65266d29",
     "url": "/react-bartender/index.html"
   },
   {
-    "revision": "9ae8badc82aad46974e0",
+    "revision": "a33df261e8324d15933c",
     "url": "/react-bartender/static/css/main.a0689d7d.chunk.css"
   },
   {
-    "revision": "1b1276f9bb5064d76859",
-    "url": "/react-bartender/static/js/2.2ddcc46d.chunk.js"
+    "revision": "5023bfbe29071c676645",
+    "url": "/react-bartender/static/js/2.273dfcce.chunk.js"
   },
   {
     "revision": "e928fe768baa9832b5bc57eae021f30c",
-    "url": "/react-bartender/static/js/2.2ddcc46d.chunk.js.LICENSE"
+    "url": "/react-bartender/static/js/2.273dfcce.chunk.js.LICENSE"
   },
   {
-    "revision": "9ae8badc82aad46974e0",
-    "url": "/react-bartender/static/js/main.672dcf6b.chunk.js"
+    "revision": "a33df261e8324d15933c",
+    "url": "/react-bartender/static/js/main.7228424e.chunk.js"
   },
   {
     "revision": "77d89e756c4df4d49631",
