@@ -156,19 +156,32 @@
       align-self: center;
       justify-content: center;
       border-radius: 4px;
-      height: 450px;
+      margin: 5px;
+      width: 100%;
+      height: 400px;
       box-shadow: 0px 0px 4px #aaa;
     }
+
+    .Details-Img{
+      display: flex;
+      width: 250px;
+      height: 250px;
+      margin: auto;
+    }
+
     .Details-Left {
       display: flex;
       justify-content: center;
       margin: 5px;
+      width: 100%;
+      height: 400px;
       flex-direction: column;
     }
 
     .Details-Right {
       display: flex;
       margin: 5px;
+      width: 100% !important;
       flex-direction: column;
       justify-content: center;
       align-self: center;
@@ -183,7 +196,7 @@
   }
   
   .Details-Right {
-    min-width: 450px;
+    max-width: 450px;
     display: flex;
     margin: 2rem;
     flex-direction: column;
@@ -259,6 +272,7 @@
     width: 1rem;
     height: 1rem;
     animation: spin 2s linear infinite;
+    justify-content: center;
   }
 
   @keyframes spin {

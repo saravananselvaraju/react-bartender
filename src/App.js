@@ -3,10 +3,9 @@ import './App.css';
 import Nav from './components/Nav';
 import Home from './components/Home';
 import {
-  BrowserRouter as Router,
+  HashRouter as Router,
   Switch,
-  Route,
-  Redirect,
+  Route
 } from 'react-router-dom';
 import Footer from './components/Footer';
 import Show from './components/Show';
@@ -16,23 +15,15 @@ import Details from './components/Details';
 function App() {
   return (
     <div className="App">
+      <Nav/>
       <Router basename="/">
-        <Route
-          render={({location}) => (
-            <div>
-              <Nav/>
-              <Route exact path="/" render={() => <Redirect to="/" />} />
-              <Switch location={location}>
-              <Route exact path={'/'} component ={Home} />
+              <Switch>
+                <Route exact path={'/'} component ={Home} />
                 <Route path={"/show/:category"} component ={Show} />
                 <Route path={"/view/:category/:id"} component ={Details} />
-                <Redirect to="/" />
               </Switch>
-            </div>
-          )}
-        />
-        <Footer></Footer>
       </Router>
+      <Footer></Footer>
     </div>
   );
 }
