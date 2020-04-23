@@ -1,166 +1,272 @@
-.App{
-  min-height: 100vh;
-}
+  @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap');
+  .App{
+    min-height: 100vh;
+    font-family: 'Roboto', sans-serif;
+  }
 
-nav{
-  display: flex;
-  flex-direction: row;
-  min-height: 4.5rem;
-  padding: 0px 9px 0px 9px;
-  max-width: 100%;
-  box-shadow: 0px 0px 2px #aaa;
-}
-
-nav{
-  justify-content: center;
-} 
-nav div{
-  display: flex;
-  flex-direction: row;
-}
-.App-Logo{
-  display: flex;
-  text-decoration: none;
-  justify-content: center;
-  align-self: center;
-  letter-spacing: .3px;
-  text-transform: uppercase;
-  color: rgba(32,26,162,.866667);
-  font-weight: 800;
-}
-
-.App-Logo-Img{
-  width: 4rem;
-  height: 4rem;
-  display: flex;
-  align-self: center;
-}
-
-.App-Content{
-  display: flex;
-  flex-direction: column;
-  max-width: 100%;
-}
-
-.App-List{
-  max-width: 100%;
-  display: flex;
-  flex-direction: row;
-  text-transform: uppercase;
-  margin: 1rem 1rem 1rem 1rem;
-  box-shadow: 1px 1px 5px #aaa;
-  text-decoration: none;
-  border-radius: 5px;
-  padding: 1rem;
-}
-
-
-.List{
-  max-width: 100%;
-  display: flex;
-  flex-direction: row;
-  text-transform: uppercase;
-  margin: 1rem 1rem 1rem 1rem;
-  box-shadow: 1px 1px 5px #aaa;
-  text-decoration: none;
-  border-radius: 5px;
-}
-
-.List-Icon{
-    width: 3rem;
-    height: 3rem;
+  nav{
     display: flex;
-    border: none;
-}
-.List-Thump{
-  width: 5rem;
-  height: 5rem;
-  display: flex;
-  border-top-left-radius: 5px;
-  border-bottom-left-radius: 5px;
-}
-.List-Name{
-  width: 100%;
-  display: flex;
-  padding-left: 30px;
-  font-weight: 700;
-  color: rgba(32,26,162,.866667);
-}
-.List-Title{
-  width: 100%;
-  display: flex;
-  align-self: center;
-  padding-left: 9px;
-  font-weight: 700;
-  color: rgba(32,26,162,.866667);
-}
+    flex-direction: row;
+    min-height: 4.5rem;
+    padding: 0px 9px 0px 9px;
+    max-width: 100%;
+    box-shadow: 0px 0px 1.4px #aaa;
+  }
 
-.Details{
-  display: flex;
-  max-width: 100%;
-  flex-direction: column;
-  padding: 1rem;
-}
+  .List-Container{  
+    display: flex;
+    min-height: 50rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 
-.Details-Img{
-  display: flex;
-  align-self: center;
-  justify-content: center;
-  width: 15rem;
-  height: 15rem;
-  border-radius: 15px;
-}
-.Details-Title{
-  color: rgba(32,26,162,.866667);
-  display: flex;
-  align-self: center;
-  justify-content: center;
-}
-.Details-Body{
-  display: flex;
-  flex-direction: column;
-}
-.Glass{
-  color: rgba(32,26,162,.866667);
-  justify-content: flex-start;
-  margin-right: auto;
-  font-weight: 700;
-  font-size: 13px;
-  align-self: center;
-  text-transform: uppercase !important;
-}
-.Date{
-  color: rgba(32,26,162,.866667);
-  justify-content: flex-end;
-  font-weight: 700;
-  font-size: 12px;
-  align-self: center;
-}
-.Details-Tag{
-  display: flex;
-  flex-direction: row;
-}
-.Details-Table{
-  max-width: 100%;
-  border-collapse: collapse;
-}
-.Tag-Ico{
-  width: 1rem;
-  height: 1rem;
-  display: flex;
-  padding-right: 5px;
-  align-self: center;
+  .App-Container{  
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  nav{
+    justify-content: center;
+    margin-bottom: 1rem;
+  } 
+  nav div{
+    display: flex;
+    flex-direction: row;
+  }
+  .App-Logo{
+    display: flex;
+    text-decoration: none;
+    justify-content: center;
+    align-self: center;
+    letter-spacing: .3px;
+    text-transform: uppercase;
+    color: #3F51B5;
+    font-weight: 800;
+  }
+
+  .App-Logo-Img{
+    width: 4rem;
+    height: 4rem;
+    display: flex;
+    align-self: center;
+  }
+
+  .App-Content{
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+  }
+
+  .App-List{
+    flex: 1 1 500px;
+    max-width: 500px;
+    display: flex;
+    height: 100px;
+    flex-direction: row;
+    text-transform: uppercase;
+    margin: 1rem;
+    box-shadow: 0px 0px 1.4px #aaa;
+    text-decoration: none;
+    border-radius: 5px;
+  }
+
+
+  .List{
+    flex: 1 1 450px;
+    max-width: 450px;
+    display: flex;
+    height: 100px;
+    flex-direction: row;
+    text-transform: capitalize;
+    margin: 1rem;
+    box-shadow: 0px 0px 1.4px #aaa;
+    text-decoration: none;
+    border-radius: 5px;
+  }
+
+  .List-Icon{
+      width: 4rem;
+      height: 4rem;
+      align-self: center;
+      display: flex;
+      border: none;
+      margin-left: 1rem;
+  }
+  .List-Thump{
+    width: 5rem;
+    margin-left: 0.8rem;
+    height: 5rem;
+    align-self: center;
+    display: flex;
+    border-radius: inherit;
+  }
+
+  .List-Name{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    padding-left: 30px;
+    font-weight: 700;
+    color: #3F51B5;
+  }
+  .List-Title{
+    justify-content: center;
+    width: 100%;
+    display: flex;
+    align-self: center;
+    padding-left: 9px;
+    font-weight: 700;
+    color: #3F51B5;
+  }
+
+  a.List:hover {
+    box-shadow: 0px 0px 4px #aaa;
+  }
+
+  .Details{
+    display: flex;  
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .Details-Img{
+    display: flex;
+    width: 350px;
+    height: 350px;
+    margin: auto;
+    border-radius: 4px;
+  }
+
+  .card{
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    align-self: center;
+    justify-content: center;
+    border-radius: 4px;
+    height: 450px;
+    box-shadow: 0px 0px 4px #aaa;
+  }
+  @media only screen and (max-width: 600px) {
+    .card{
+      display: flex;
+      flex-direction: column;
+      align-self: center;
+      justify-content: center;
+      border-radius: 4px;
+      height: 450px;
+      box-shadow: 0px 0px 4px #aaa;
+    }
+    .Details-Left {
+      display: flex;
+      justify-content: center;
+      margin: 5px;
+      flex-direction: column;
+    }
+
+    .Details-Right {
+      display: flex;
+      margin: 5px;
+      flex-direction: column;
+      justify-content: center;
+      align-self: center;
+  }
+  }
+  .Details-Title{
+    color: #3F51B5;
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    text-transform: uppercase;
+  }
   
+  .Details-Right {
+    min-width: 450px;
+    display: flex;
+    margin: 2rem;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
 }
-.Details-Table th, td {
-  padding: 5px;
-  border: 1px solid #aaa;
-  text-align: left;
-}
-.Details-Table tr td, .Details-Table tr th{
-  text-align: left;
-}
-.Footer{
+.Details-Left {
   display: flex;
   justify-content: center;
+  margin: 2rem;
+  flex-direction: column;
+}
+
+  .Glass{
+    justify-content: flex-start;
+    margin-right: auto;
+    font-weight: 700;
+    font-size: 13px;
+    align-self: center;
+    text-transform: uppercase !important;
+  }
+  .Date{
+    justify-content: flex-end;
+    font-weight: 700;
+    font-size: 12px;
+    align-self: center;
+  }
+  .Details-Tag{
+    display: flex;
+    flex-direction: row;
+  }
+  .Details-Table{
+    max-width: 100%;
+    border-collapse: collapse;
+  }
+  .Tag-Ico{
+    width: 1rem;
+    height: 1rem;
+    display: flex;
+    padding-right: 5px;
+    align-self: center;
+    
+  }
+  
+  table {
+    border-collapse: collapse;
+  }
+
+  th{
+    color: #3F51B5;
+    text-transform: uppercase;
+  }
+  
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+
+  .Footer{
+    display: flex;
+    justify-content: center;
+    margin-top:2rem;
+    box-shadow: 0px 0px 1px #aaa;
+    margin-bottom: auto;
+  }
+
+  .Loader {
+    display: flex;
+    border: 5px solid #f3f3f3; 
+    border-top: 5px solid #3F51B5; 
+    border-radius: 50%;
+    width: 1rem;
+    height: 1rem;
+    animation: spin 2s linear infinite;
+  }
+
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+.Details h4{
+  color: #3F51B5;
+  text-transform: uppercase;
+  font-weight: 900;
 }

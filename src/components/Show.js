@@ -1,32 +1,37 @@
-import React, { useState, useEffect } from 'react'
-import { object } from 'prop-types';
+import React, { useState, useEffect } from 'react';
+import {Link} from 'react-router-dom';
+import {api} from '../constants.js';
 
 const Show = (props)=> {
     const [hasError, setErrors] = useState(false);
-    const [drinks, setDrinks] = useState({});
-    const category = props.match.params[0];
+    var [result, setResult] = useState([]);
+    const category = props.match.params.category;
+    var [isLoading, setIsLoaing] = useState(true);
     useEffect(() => {
       async function fetchData() {
-        const res = await fetch("https://www.thecocktaildb.com/api/json/v1/1/filter.php?c="+category);
+        const res = await fetch(`${api}filter.php?c=${category}`);
         res
           .json()
-          .then(res => setDrinks(res))
+          .then(res => setResult(res.drinks))
           .catch(err => setErrors(err));
+          setIsLoaing(false);
       }
       fetchData();
+      
     },[]);
 
-    var list = [];
-    for(var drink of Object.values(drinks)){
-        for(var ele of Object.values(drink)){
-            var vars = Object.values(ele)
-            list.push(<a className="List" href={`${process.env.PUBLIC_URL }/#/details/${category}/${vars[2]}`}><img className="List-Thump" src={`${vars[1]}/preview`}></img><p className="List-Title">{vars[0]}</p></a>)
-        }
-    }
-    
+
     return (
-        <div>
-            {list}
+        <div className="List-Container">
+            {  
+               result.map(drink => 
+              <Link className="List" key={drink.idDrink} to={`/view/${category}/${drink.idDrink}`}>
+                <img className="List-Thump" src={`${drink.strDrinkThumb}/preview`}></img>
+                <p className="List-Title">{drink.strDrink}</p>
+              </Link>
+              )
+            }
+            {isLoading&&<div className="Loader"></div>}
         </div>
     )
 }

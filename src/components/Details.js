@@ -1,69 +1,65 @@
-import React,  { useState, useEffect } from 'react'
+import React, { useState, useEffect } from 'react';
+import { api } from '../constants.js';
 
 function Details(props) {
-    var url = props.match.params[0];
-    var id = url.split('/')[1];
+    var id = props.match.params.id;
     const [hasError, setErrors] = useState(false);
-    const [details, setDetails] = useState({});
+    const [details, setDetails] = useState([]);
+
     useEffect(() => {
         async function fetchData() {
-          const res = await fetch("https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i="+id);
-          res
-            .json()
-            .then(res => setDetails(res))
-            .catch(err => setErrors(err));
+            const res = await fetch(`${api}lookup.php?i=${id}`);
+            res
+                .json()
+                .then(res => setDetails(res.drinks[0]))
+                .catch(err => setErrors(err));
         }
         fetchData();
-    },[]);
-    
-    var DrinkName, Glass, Thumbnail, Instruction = [], Date
-    var Ingredient=[]
-    var Measure=[]
+    }, []);
 
-    for(var [key,value] of Object.entries(details)){
-        for(var drink of value){
-            DrinkName = drink.strDrink
-            Glass = drink.strGlass
-            Thumbnail = drink.strDrinkThumb
-            for (var ins of drink.strInstructions.split(/[0-9]./)){
-                if(ins){
-                    Instruction.push(<li>{ins}</li>)
-                }
-            }
-            Date = drink.dateModified
-            for(var k of Object.keys(drink)){   
-                if( k.includes('strIngredient') && drink[k] != null){
-                   Ingredient.push(
-                        <tr>
-                            <td>{drink[k]}</td>
-                            <td>{drink[k.replace('strIngredient','strMeasure')]}</td>
-                       </tr>) 
-                }
-            }
-            console.log(details);
-            
+    let list = []
+    for (var key of Object.keys(details)) {
+        if (key.includes("strIngredient") && details[key] != null) {
+            list.push(<tr key={key}><td>{details[key]}</td><td>{details[key.replace('strIngredient', 'strMeasure')]}</td></tr>)
         }
     }
-    
-    
+
+
     return (
         <div className="Details">
-            <h3 className="Details-Title">{DrinkName}</h3>
-            <img className="Details-Img" src={Thumbnail}></img>
-            <div className="Details-Body">
-                <div className="Details-Tag">
-                    <img src={process.env.PUBLIC_URL +"/img/ico/glass.svg"} className="Tag-Ico"></img><p className="Glass">{Glass}</p> 
-                    <img src={process.env.PUBLIC_URL +"/img/ico/clock.svg"} className="Tag-Ico"></img><p className="Date">{Date}</p>
-                    </div>
-                <table className="Details-Table">
-                    <tr>
-                        <th>Ingredients</th>
-                        <th>Measure</th>
-                    </tr>
-                    {Ingredient}
-                </table>               
-                <h4>Instructions:</h4>
-                <ol>{Instruction}</ol>
+            <div className="Details-Left">
+                <div className="card">
+                <img className="Details-Img" src={details.strDrinkThumb}></img>
+                <h3 className="Details-Title">{details.strDrink}</h3>
+                </div>
+            </div>
+            <div className="Details-Right">
+            <h4>Ingredients</h4>
+            <div className="Details-Tag">
+                    <img src={process.env.PUBLIC_URL + "/img/ico/glass.svg"} className="Tag-Ico"></img><p className="Glass">{details.strGlass}</p>
+                    <img src={process.env.PUBLIC_URL + "/img/ico/clock.svg"} className="Tag-Ico"></img><p className="Date">
+                    {
+                        details.dateModified  && details.dateModified.split(' ')[0]
+                    }
+                    </p>
+                </div>
+            <table className="Details-Table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Measure</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {
+                            list
+                        }
+                    </tbody>
+                </table>  
+                <h4>Instructions</h4>
+                <p>
+                    {details.strInstructions}
+                </p>
             </div>
         </div>
     )

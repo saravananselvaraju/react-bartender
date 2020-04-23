@@ -3,7 +3,7 @@ import './App.css';
 import Nav from './components/Nav';
 import Home from './components/Home';
 import {
-  HashRouter as Router,
+  BrowserRouter as Router,
   Switch,
   Route,
   Redirect,
@@ -24,8 +24,8 @@ function App() {
               <Route exact path="/" render={() => <Redirect to="/" />} />
               <Switch location={location}>
               <Route exact path={'/'} component ={Home} />
-                <Route exact path={"/show/*"} component ={Show} />
-                <Route exact path={"/details/*"} component ={Details} />
+                <Route path={"/show/:category"} component ={Show} />
+                <Route path={"/view/:category/:id"} component ={Details} />
                 <Redirect to="/" />
               </Switch>
             </div>
