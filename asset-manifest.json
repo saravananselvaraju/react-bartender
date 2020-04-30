@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/react-bartender/static/css/main.815f870c.chunk.css",
-    "main.js": "/react-bartender/static/js/main.03fd0dba.chunk.js",
-    "main.js.map": "/react-bartender/static/js/main.03fd0dba.chunk.js.map",
+    "main.js": "/react-bartender/static/js/main.44033c24.chunk.js",
+    "main.js.map": "/react-bartender/static/js/main.44033c24.chunk.js.map",
     "runtime-main.js": "/react-bartender/static/js/runtime-main.0e028322.js",
     "runtime-main.js.map": "/react-bartender/static/js/runtime-main.0e028322.js.map",
     "static/js/2.872af0df.chunk.js": "/react-bartender/static/js/2.872af0df.chunk.js",
     "static/js/2.872af0df.chunk.js.map": "/react-bartender/static/js/2.872af0df.chunk.js.map",
     "index.html": "/react-bartender/index.html",
-    "precache-manifest.5d1347ea617cf8e5e211d02ecb20fb05.js": "/react-bartender/precache-manifest.5d1347ea617cf8e5e211d02ecb20fb05.js",
+    "precache-manifest.8445d734a8b7fd6ce4384f293a396d29.js": "/react-bartender/precache-manifest.8445d734a8b7fd6ce4384f293a396d29.js",
     "service-worker.js": "/react-bartender/service-worker.js",
     "static/css/main.815f870c.chunk.css.map": "/react-bartender/static/css/main.815f870c.chunk.css.map",
     "static/js/2.872af0df.chunk.js.LICENSE": "/react-bartender/static/js/2.872af0df.chunk.js.LICENSE"
@@ -17,6 +17,6 @@
     "static/js/runtime-main.0e028322.js",
     "static/js/2.872af0df.chunk.js",
     "static/css/main.815f870c.chunk.css",
-    "static/js/main.03fd0dba.chunk.js"
+    "static/js/main.44033c24.chunk.js"
   ]
 }
