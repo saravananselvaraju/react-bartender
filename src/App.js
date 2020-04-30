@@ -3,7 +3,7 @@ import './App.css';
 import Nav from './components/Nav';
 import Home from './components/Home';
 import {
-  HashRouter as Router,
+  BrowserRouter as Router,
   Switch,
   Route
 } from 'react-router-dom';
@@ -16,7 +16,7 @@ function App() {
   return (
     <div className="App">
       <Nav/>
-      <Router basename="/">
+      <Router basename="/react-bartender">
               <Switch>
                 <Route exact path={'/'} component ={Home} />
                 <Route path={"/show/:category"} component ={Show} />

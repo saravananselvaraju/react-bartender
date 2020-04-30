@@ -29,7 +29,7 @@ function Details(props) {
 
     return (
         <div className="Details">
-            <div className="Details-Left">
+            <div className="Details-Left" >
                 <div className="card">
                     <img className="Details-Img" src={details.strDrinkThumb}></img>
                     {
@@ -49,6 +49,9 @@ function Details(props) {
                     </p>
 
                 </div>
+                {
+                    isLoading && <div className="Loader"></div>
+                }
                 <table className="Details-Table">
                     <thead>
                         <tr>
@@ -60,15 +63,16 @@ function Details(props) {
                         {
                             list
                         }
-                        {
-                            isLoading && <div className="Loader"></div>
-                        }
+
                     </tbody>
                 </table>
                 <h4>Instructions</h4>
                 <p>
                     {details.strInstructions}
                 </p>
+                {
+                    isLoading && <div className="Loader"></div>
+                }
             </div>
         </div>
     )
